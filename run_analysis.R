@@ -36,10 +36,8 @@
 #Step 2. Assign descriptive activity names to name the activities in
 #        the data set
 #====================================================================
- AllDataSet$activity<-factor(AllDataSet$activity,
-                             labels=c("walking","walkingupstairs",
-                                      "walkingdownstairs","sitting",
-                                     "standing","laying"))
+activities<- c("walking","walkingupstairs","walkingdownstairs","sitting","standing","laying")
+AllDataSet[,2]<-factor(AllDataSet[,2],labels=activities)
 
 #====================================================================
 
